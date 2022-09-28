@@ -9,3 +9,4 @@ function InputSearch({ getMovie }) {
 }
 
 export default InputSearch;
+

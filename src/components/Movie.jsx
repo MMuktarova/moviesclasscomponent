@@ -1,4 +1,4 @@
-function Movie({ data, isFavorite }) {
+function Movie({ data, handlerFavorite, btnClass, btnText }) {
   const { Title, Poster, Year } = data;
   return (
     <div className="card">
@@ -8,10 +8,10 @@ function Movie({ data, isFavorite }) {
           {Title} - {Year}
         </p>
         <button
-          className="btn btn-sm btn-success"
-          onClick={() => isFavorite(Title)}
+          className={`btn btn-sm btn-${btnClass}`}
+          onClick={() => handlerFavorite(data)}
         >
-          Add to Favorites
+          {btnText}
         </button>
       </div>
     </div>
